@@ -85,3 +85,9 @@ class ModelTests(TestCase):
 
         exp_path = f'uploads/recipe/{uuid}.jpg'
         self.assertEqual(file_path, exp_path)
+
+    def test_list_user(self):
+        """list the users"""
+        users = get_user_model().objects.get()
+        print(users)
+        self.assertTrue(True)
